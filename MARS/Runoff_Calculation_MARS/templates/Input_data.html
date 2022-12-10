@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Input Data</h1>
+<p><h3> (Only .csv files allowed)</h3></p>
+
+    <div class=''>
+        <form class="action" method="post" enctype="multipart/form-data">
+            <input type="file" name="csvfile" value="">
+            <input type="submit" submit name='form1' name="value" value="Submit">
+        </form>
+    </div>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<h1>Provide the parameters for MARS</h1>
+  <h2>Default Parameters list</h2>
+  <p>(All the parameters provided are for MARS) </p>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Default Parameters list</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">endspan_alpha</li>
+          <li class="list-group-item">minspan_alpha</li>
+          <li class="list-group-item">penalty</li>
+          <li class="list-group-item">min_search_points</li>
+          <li class="list-group-item">max_terms</li>
+        </ul>
+        <div class="panel-footer">Footer</div>
+      </div>
+    </div>
+  </div>
+
+  <form action="" method="post">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">endspan_alpha:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="pwd" name="endspan_alpha" placeholder="Enter the value of endspan_alpha">
+      </div>
+      <label class="control-label col-sm-2" for="pwd">test_size:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="pwd" name="test_size" placeholder="Enter the value of the test_size (in decmals)">
+      </div>
+      <label class="control-label col-sm-2" for="pwd">minspan_alpha:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="pwd" name="minspan_alpha" placeholder="Enter the value of minspan_alpha">
+      </div>
+      <label class="control-label col-sm-2" for="pwd">max_terms:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="pwd" name="max_terms" placeholder="Enter the value of the max_terms">
+      </div>
+      <label class="control-label col-sm-2" for="pwd">penalty:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="pwd" name="penalty" placeholder="Enter the value of penalty">
+      </div>
+      <label class="control-label col-sm-2" for="pwd">min_search_points:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="pwd" name="min_search_points" placeholder="Enter the value of the min_search_points">
+      </div>
+    </div>
+    <input type="submit" submit name='form2' name="value" value="Submit">
+  </form>
+</div>
+    
+</body>
+</html>
+
+{% endblock content %}
